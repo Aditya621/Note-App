@@ -1,1 +1,1 @@
-#  React + TypeScript + Vite
+#  Note - App in  React + TypeScript 
