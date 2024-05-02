@@ -10,7 +10,7 @@ function NoteApp() {
   const [count, setCount] = useState(0);
 
   function addNotes() {
-    if (!title && !status) {
+    if (!title || !status) {
       window.alert('Please add Title & Status');
       return;
     }
@@ -27,11 +27,11 @@ function NoteApp() {
   }
 
   function checkActiveStatus() {
-    setNotes(dataStore.filter((items: any) => items.status === 'Active'));
+    setNotes(dataStore.filter((items: any) => items.status === 'Active' ||  items.status === 'active'));
   }
 
   function checkCompletedStatus() {
-    setNotes(dataStore.filter((items: any) => items.status === 'Completed'));
+    setNotes(dataStore.filter((items: any) => items.status === 'Completed' || items.status === 'completed'));
   }
 
   return (
