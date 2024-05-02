@@ -1,8 +1,16 @@
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  border: 2px solid black;
+  border: 20px solid black;
   width: 50%;
+  border-radius: 10px;
+  border-style: hidden; /* hide standard table (collapsed) border */
+  box-shadow: 0 0 0 2px #666; /* this draws the table border  */ 
+
+}
+
+input{
+  padding : 10px
 }
 
 .main {
@@ -16,12 +24,21 @@ table {
   padding-top: 49px;
   border-radius: 30px;
   margin: calc(15% - 2em);
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .btn {
   display: flex;
+  flex-direction: row;
   margin: 20px;
-  gap: 50px;
+  gap: 40px;
+}
+
+@media only screen and (max-width: 480px)  {
+  .btn{
+    flex-direction: column;
+  }
 }
 
 .data {
@@ -58,6 +75,6 @@ table {
 td,
 th {
   border: 1px solid black;
-  text-align: left;
+  /* text-align: left; */
   padding: 8px;
 }
